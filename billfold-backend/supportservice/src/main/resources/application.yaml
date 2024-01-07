@@ -1,0 +1,30 @@
+server:
+  port : 8081
+spring:
+  application:
+   name: SUPPORT-SERVICE
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/billfoldsupportservicedb
+    username: root
+    password: root#123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  config:
+        import: configserver:http://localhost:9296
+  mail:
+        host: smtp.xxx.com
+        password: xxxxx
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+                        required: 'true'
+        username: xxx@xxx.com  
+paypal:
+ client:
+    id:
+    secret: 
