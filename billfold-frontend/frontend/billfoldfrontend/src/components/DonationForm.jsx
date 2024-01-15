@@ -82,7 +82,7 @@ const DonationForm = () => {
     <>
     <Navbar/>
     <div className="container mx-auto mt-8">
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded-md shadow-md  bg-teal-200 mb-12">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto  p-8 rounded-md shadow-md  bg-teal-200 mb-12">
         <h2 className="text-2xl font-semibold mb-4">Make a Donation</h2>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-600 text-sm font-medium mb-2">Name</label>
