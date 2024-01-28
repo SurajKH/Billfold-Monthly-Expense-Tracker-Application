@@ -20,6 +20,8 @@ public class UserFinanceResponseDTO {
     private String years;
     private Double minCap;
     private Double maxCap;
+    private Double midCap;
     private Double minCapAmount;
     private Double maxCapAmount;
+    private Double midCapAmount;
 }

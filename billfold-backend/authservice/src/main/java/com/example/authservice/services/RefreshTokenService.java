@@ -63,20 +63,20 @@ public class RefreshTokenService {
         .user(user)
         .build();
 
-       refreshTokenRepository.save(refreshToken);
-       // save user details as well.
-        User existingUser= userRepository.findByEmail(emailId).get();
-        existingUser.setRefreshToken(refreshToken);
-        userRepository.save(existingUser);
-       return refreshToken;
+        refreshTokenRepository.save(refreshToken);
+        // save user details as well.
+            User existingUser= userRepository.findByEmail(emailId).get();
+            existingUser.setRefreshToken(refreshToken);
+            userRepository.save(existingUser);
+        return refreshToken;
+            }
+            // we are building the refresh_token over here.  
+        else
+        {
+            refreshTokenfromDB.setExpiry(Instant.now().plusMillis(refreshTokenValidity));
         }
-        // we are building the refresh_token over here.  
-       else
-       {
-        refreshTokenfromDB.setExpiry(Instant.now().plusMillis(refreshTokenValidity));
-       }
-       refreshTokenRepository.save(refreshTokenfromDB);
-       return refreshTokenfromDB;
+        refreshTokenRepository.save(refreshTokenfromDB);
+        return refreshTokenfromDB;
     }
 
     public RefreshToken verifyRefreshToken(String refreshToken) throws Exception
@@ -84,16 +84,16 @@ public class RefreshTokenService {
         // lets verify the refresh token over here.
         RefreshToken verifyRefreshToken=refreshTokenRepository
         .findByRefreshToken(refreshToken).orElseThrow(()->new RuntimeException("Given Token does not exist in DB"));
-       if(verifyRefreshToken.getExpiry().compareTo(Instant.now())<0)
-       {
-        // here it states that the refresh token is expired.
-        throw new Exception("Refresh Token is Expired.");
-       }
-       else
-       {
-        // here it stats that the token is verified over here.
-        return verifyRefreshToken;
-       }
+        if(verifyRefreshToken.getExpiry().compareTo(Instant.now())<0)
+        {
+            // here it states that the refresh token is expired.
+            throw new Exception("Refresh Token is Expired.");
+        }
+        else
+        {
+            // here it stats that the token is verified over here.
+            return verifyRefreshToken;
+        }
     }
 
 
