@@ -170,11 +170,13 @@
 // export default Dashboard;
 
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setAmount, setCurrentMonth, setSavings } from '../redux/financeSlice';
 import Footer from './Footer';
 import Navbar from './Navbar';
-
+import SavingsChart from './SavingsChart';
+import monthlySavingsData from '../utils/SavingsHistory';
+import ReduxContents from './ReduxContents';
 const months = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
@@ -249,9 +251,57 @@ const Dashboard = () => {
               />
             </div>
 
-            {/* ... (Similar input fields for other expenses) ... */}
+            <div className="mb-4">
+              <label htmlFor="grocery" className="block text-sm font-medium text-gray-600">
+                Grocery
+              </label>
+              <input
+                type="number"
+                id="grocery"
+                name="grocery"
+                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
 
-            {/* Select Month */}
+            <div className="mb-4">
+              <label htmlFor="laundary" className="block text-sm font-medium text-gray-600">
+                Laundry
+              </label>
+              <input
+                type="number"
+                id="laundary"
+                name="laundary"
+                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="travel" className="block text-sm font-medium text-gray-600">
+                Travel
+              </label>
+              <input
+                type="number"
+                id="travel"
+                name="travel"
+                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="otherExpenses" className="block text-sm font-medium text-gray-600">
+                Other Expenses
+              </label>
+              <input
+                type="number"
+                id="otherExpenses"
+                name="otherExpenses"
+                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500"
+                required
+              />
+            </div>
             <div className="mb-4">
               <label htmlFor="selectedMonth" className="block text-sm font-medium text-gray-600">
                 Select Month:
@@ -290,8 +340,9 @@ const Dashboard = () => {
             <p className="text-lg font-semibold">Current Month: {selectedMonth}</p>
           </div>
         </div>
-      )}
-
+      ) && <SavingsChart data={monthlySavingsData}/>}
+    
+       <ReduxContents/>
       <Footer />
     </>
   );

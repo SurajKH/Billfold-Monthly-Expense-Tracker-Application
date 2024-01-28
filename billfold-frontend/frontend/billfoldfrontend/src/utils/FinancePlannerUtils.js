@@ -6,14 +6,14 @@ export function fixedDeposit(amount)
 
     //lets consider the amount to be managed using state management redux.
 
-   var minDeposit=2.50,maxDeposit=9.00;
+    var minDeposit=2.50,maxDeposit=9.00;
 
-   var fixedDepositMinAmount=minDeposit*amount;
-   console.log(fixedDepositMinAmount);
+    var fixedDepositMinAmount=minDeposit*amount;
+    console.log(fixedDepositMinAmount);
 
-   var fixedDepositMaxAmount=maxDeposit*amount;
-   console.log(fixedDepositMaxAmount);
-   return {fixedDepositMinAmount,fixedDepositMaxAmount};
+    var fixedDepositMaxAmount=maxDeposit*amount;
+    console.log(fixedDepositMaxAmount);
+    return {fixedDepositMinAmount,fixedDepositMaxAmount};
 
 };
 

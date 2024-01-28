@@ -23,4 +23,6 @@ const financeSlice = createSlice({
 });
 
 export const { setAmount, setCurrentMonth, setSavings } = financeSlice.actions;
+
+
 export default financeSlice.reducer;

@@ -22,7 +22,7 @@ const Navbar = () => {
             width={"70px"}
           /> */}
 
-           <span className='ml-12'> Your Bills with Essential Stats.</span>
+            <span className='ml-12'> Your Bills with Essential Stats.</span>
         </span>
       </a>
 
@@ -40,23 +40,23 @@ const Navbar = () => {
           <ul className="lg:flex sm:w-full lg:w-1/2 mx-auto">
             <hr/>
             <li className='p-5'>
-              <a href='http://localhost:3000' className="text-teal-300">Home</a>
+              <a href='http://localhost:3000' className="text-teal-300" style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Home</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/dashboard' className="text-teal-300" >Dashboard</a>
+              <a href='http://localhost:3000/dashboard' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Dashboard</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/services' className="text-teal-300" >Services</a>
+              <a href='http://localhost:3000/services' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Services</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/contact-us' className="text-teal-300" >Contact</a>
+              <a href='http://localhost:3000/contact-us' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Contact</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/donate' className="text-teal-300" >Donate</a>
+              <a href='http://localhost:3000/donate' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Donate</a>
             </li>
             {/* <li className='p-1'>
             <a href='http://localhost:3000/donate' className='text-white' style={{ display: 'flex', alignItems: 'center',alignContent:"center" }}>
