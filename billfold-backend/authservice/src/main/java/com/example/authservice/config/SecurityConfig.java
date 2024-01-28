@@ -2,6 +2,8 @@ package com.example.authservice.config;
 
 import com.example.authservice.services.UserService;
 import lombok.AllArgsConstructor;
+
+import org.apache.http.protocol.HTTP;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -33,30 +35,32 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception
     {
-        /*
-           httpSecurity.csrf(csrf->csrf.disable())
-                .authorizeHttpRequests(authorize->{
-                  authorize.requestMatchers(HttpMethod.POST,"/api/v1/signin").permitAll()
-                          .requestMatchers(HttpMethod.POST,"/api/v1/signup").permitAll()
-                          .requestMatchers(HttpMethod.GET,"/api/v1/signup/users").permitAll()
-                          .requestMatchers(HttpMethod.POST,"/api/v1/signup/phone").permitAll()
-                          .requestMatchers(HttpMethod.GET, "/api/v1/dashboard").permitAll()
-                          .anyRequest().authenticated();
-                })
-         */
+    /*
         httpSecurity.csrf(csrf->csrf.disable())
-                .authorizeHttpRequests(authorize->{
-                  authorize.requestMatchers(HttpMethod.POST,"/api/v1/signin").permitAll()
-                          .requestMatchers(HttpMethod.POST,"/api/v1/signup").permitAll()
-                          .requestMatchers(HttpMethod.GET,"/api/v1/signup/**").permitAll()
-                          .requestMatchers(HttpMethod.POST,"/api/v1/signup/phone").permitAll()
-                          .requestMatchers(HttpMethod.POST,"/api/v1/refresh")
-                          .permitAll()
-                          .requestMatchers(HttpMethod.POST,"http://localhost:8081/api/v1/support/**")
-                          .permitAll()
-                          .requestMatchers(HttpMethod.GET,"/user").authenticated() 
-                          .requestMatchers(HttpMethod.GET,"/dashboard").authenticated()
-                          .anyRequest().authenticated();
+            .authorizeHttpRequests(authorize->{
+                authorize.requestMatchers(HttpMethod.POST,"/api/v1/signin").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/v1/signup").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/api/v1/signup/users").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/v1/signup/phone").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/v1/dashboard").permitAll()
+                        .anyRequest().authenticated();
+            })
+        */
+    httpSecurity.csrf(csrf->csrf.disable())
+            .authorizeHttpRequests(authorize->{
+                authorize.requestMatchers(HttpMethod.POST,"http://localhost:8080/api/v1/signin").permitAll()
+                .requestMatchers(HttpMethod.POST,"http://localhost:8080/api/v1/signup").permitAll()
+                .requestMatchers(HttpMethod.POST,"/api/v1/signin").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/v1/signup").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/api/v1/signup/**").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/v1/signup/phone").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/v1/refresh")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.POST,"http://localhost:8081/api/v1/support/**")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.GET,"/user").authenticated() 
+                        .requestMatchers(HttpMethod.GET,"/dashboard").authenticated()
+                        .anyRequest().authenticated();
 
                 })
                 .sessionManagement(manager->manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -89,6 +93,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
         config.addAllowedOrigin("http://localhost:8081"); // Adjust the origin to match your support service URL
+        config.addAllowedOrigin("http://localhost:3000"); // Adjust the origin to match your support service
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
