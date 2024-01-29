@@ -177,12 +177,17 @@ import Navbar from './Navbar';
 import SavingsChart from './SavingsChart';
 import monthlySavingsData from '../utils/SavingsHistory';
 import ReduxContents from './ReduxContents';
+import TokenValidity from './TokenValidity';
 const months = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
 ];
 
 const Dashboard = () => {
+
+  // we are checking for the validity of the token.
+  TokenValidity();
+
   const dispatch = useDispatch();
   const [submitStatus, setSubmitStatus] = useState(false);
   const [totalExpenses, setTotalExpenses] = useState(0);

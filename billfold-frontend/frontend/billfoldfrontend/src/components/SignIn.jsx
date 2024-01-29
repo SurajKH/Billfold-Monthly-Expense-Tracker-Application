@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
-
+import AuthService from './AuthService';
 
 const SignIn = () => {
 
+    const [accessToken, setAccessToken] = useState('');
+    const [tokenExpiration, setTokenExpiration] = useState('');
+
+    
         const navigate = useNavigate("http://localhost:3000");
 
         const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -23,18 +27,35 @@ const SignIn = () => {
             
             console.log('Login successful.', response);
 
-            const accessToken = response.data.token;
-            console.log("Access Token: ",accessToken);
-            
-        document.cookie = `accessToken=${accessToken}; path=/; secure; HttpOnly`;
-        localStorage.setItem('token',accessToken);
-        navigate("/dashboard");
 
-        
-        } catch (error) {
-            console.log(error);
-            navigate("/error");
+            const accessToken = response.data.token;
+            const tokenExpire=Date.now() + 120000; 
+            setAccessToken(accessToken);
+            setTokenExpiration(tokenExpire);
+
+            console.log("Access Token: ",accessToken);
+
+            AuthService.storeToken(accessToken, tokenExpire);
+
+            // Redirect to the dashboard upon successful login
+            navigate('/dashboard');
+
         }
+        catch (e) {
+            console.log(e);
+        }
+            
+        //prev code changes.
+        // document.cookie = `accessToken=${accessToken}; path=/; secure; HttpOnly`;
+        // localStorage.setItem('token',accessToken);
+        // navigate("/dashboard");
+        
+        
+        // } catch (error) {
+        //     console.log(error);
+        //     navigate("/error");
+        // }
+
     };
 
   return (
