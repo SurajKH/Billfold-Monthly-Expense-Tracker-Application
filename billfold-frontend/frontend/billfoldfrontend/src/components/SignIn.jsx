@@ -29,7 +29,7 @@ const SignIn = () => {
 
 
             const accessToken = response.data.token;
-            const tokenExpire=Date.now() + 120000; 
+            const tokenExpire=Date.now() + 1200000; 
             setAccessToken(accessToken);
             setTokenExpiration(tokenExpire);
 
