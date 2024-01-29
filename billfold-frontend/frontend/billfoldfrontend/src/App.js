@@ -12,6 +12,7 @@ import { AuthProvider } from './context/AuthContext';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Home from './components/Home';
+import Services from './components/Services';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
@@ -29,6 +30,7 @@ function App() {
       <BrowserRouter>
       <Routes>
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/services" element={<Services />} />
       <Route path='/donate' element={<DonationForm/>} />
       <Route path='/finance-planner' element={<FinancialPlanner/>} /> 
       <Route path='/finance-planner/1' element={<FixedDeposit/>} />

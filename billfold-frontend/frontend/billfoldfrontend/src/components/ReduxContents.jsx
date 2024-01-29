@@ -47,20 +47,34 @@ const ReduxContents = () => {
 */
 
 // MyComponent.js
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { persistedFinanceSelector } from '../redux/selectors'; // Import the selector for the persisted finance state
+import React,{useState,useEffect} from 'react';
 
 const ReduxContents = () => {
-  // Use the useSelector hook to access the persisted Redux state
-    const persistedFinanceState = useSelector(persistedFinanceSelector);
+    const [persistedState, setPersistedState] = useState(null);
 
-    return (
-        <div>
-        <h2>Persisted Redux State:</h2>
-        <pre>{JSON.stringify(persistedFinanceState, null, 2)}</pre>
-        </div>
-    );
+  useEffect(() => {
+    // Fetch the persisted state from storage
+    const persistedStateString = localStorage.getItem('persist:root');
+
+    // Parse and set the state
+    try {
+      const parsedState = JSON.parse(persistedStateString);
+      setPersistedState(parsedState);
+    } catch (error) {
+      console.error('Error parsing persisted state:', error);
+    }
+  }, []);
+
+  return (
+    <div>
+      {/* <h2>Persisted State Details</h2>
+      {persistedState ? (
+        <pre>{JSON.stringify(persistedState, null, 2)}</pre>
+      ) : (
+        <p>No persisted state found.</p>
+      )} */}
+    </div>
+  );
 };
 
 export default ReduxContents;

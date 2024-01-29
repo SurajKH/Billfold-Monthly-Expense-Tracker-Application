@@ -40,7 +40,7 @@ const SignUp = () => {
         <Navbar/>
         <div>
         <section class="bg-gray-50 dark:bg-gray-900">
-        <div  style={{backgroundColor:"#cccbff",backgroundSize:"cover",overflow:"hidden"}} class="flex flex-col items-center justify-center px-8 py-8 md:h-screen">
+        <div  style={{backgroundSize:"cover",overflow:"hidden"}} class="flex bg-teal-100 flex-col items-center justify-center px-8 py-8 md:h-screen">
 
         {/* <Marquee><p className='bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-2.5 py-2.5 shadow-md mt-0.5 mb-7'><h2>Note: Access to the Website is restricted to the Admins, contact Admin for further assistance. </h2></p></Marquee> */}
             <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
