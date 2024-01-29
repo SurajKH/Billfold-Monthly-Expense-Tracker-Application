@@ -339,16 +339,20 @@ const Dashboard = () => {
 
       {submitStatus && (
         <div className="max-w-md mx-auto p-6 border border-gray-300 shadow-md rounded-md m-12">
-          <h2 className="text-2xl font-bold mb-4">Saving Amount</h2>
+          <h2 className="text-2xl font-bold mb-4">Saving Amount Summary</h2>
           <div className="bg-green-200 p-4 rounded-md">
-            <p className="text-lg font-semibold">Your savings: {walletAmount - totalExpenses} INR</p>
+            <p className="text-lg font-semibold">Wallet Money: {walletAmount}  <span>&#x20B9;</span></p>
+            <p className="text-lg font-semibold">Total Expenses: {totalExpenses}  <span>&#x20B9;</span></p>
+            <p className="text-lg font-semibold">Your savings: {walletAmount - totalExpenses}  <span>&#x20B9;</span></p>
             <p className="text-lg font-semibold">Current Month: {selectedMonth}</p>
           </div>
         </div>
       )}
     
-       <ReduxContents/>
-       <SavingsChart/>
+       {/* <ReduxContents/> */}
+       {/* <SavingsChart/> */}
+       {/* Investment Plans. */}
+       
       <Footer />
     </>
   );

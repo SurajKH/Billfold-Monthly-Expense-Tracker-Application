@@ -14,10 +14,11 @@ import storage from 'redux-persist/lib/storage'
 import {combineReducers} from "redux"; 
 import { persistReducer } from 'redux-persist';
 import financeReducer from './financeSlice';
-import {thunk} from 'redux-thunk';
+import investmentReducer from './investmentSlice';
 
 const reducers = combineReducers({
-    finance: financeReducer          
+    finance: financeReducer,
+    investment:investmentReducer      
 });
 
 const persistConfig = {

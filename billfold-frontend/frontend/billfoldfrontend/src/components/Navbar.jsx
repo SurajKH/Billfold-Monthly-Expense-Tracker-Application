@@ -3,11 +3,14 @@ import React,{useState} from 'react';
 const Navbar = () => {
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
+
 
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  
   return (
     <header>
        <nav className="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800" style={{backgroundColor:"bg-black",backgroundSize:"cover",overflow:"hidden"}}>
@@ -52,6 +55,10 @@ const Navbar = () => {
             </li>
             <hr/>
             <li className='p-5' >
+              <a href='http://localhost:3000/graphs' className="text-teal-300 dark:text-white border-b border-white pb-1">Chart Visualizations</a>
+            </li>
+            <hr/>
+            <li className='p-5' >
               <a href='http://localhost:3000/contact-us' className="text-teal-300 dark:text-white border-b border-white pb-1">Contact</a>
             </li>
             <hr/>
@@ -69,6 +76,7 @@ const Navbar = () => {
               height:"70px",marginLeft: '5px',border:"2px solid white",borderRadius:"25px" }} />
             </a>
            </li> */}
+         
           </ul>
         </div>
     </nav>
