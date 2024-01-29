@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import AuthService from './AuthService';
+import Navbar from './Navbar';
 
 const SignIn = () => {
 
@@ -58,20 +59,24 @@ const SignIn = () => {
 
     };
 
-  return (
+    return (
         <React.Fragment>
-        <div style={{backgroundImage:`url("https://img.freepik.com/premium-vector/delivery-agent-checking-delivery-illustration-concept-white-background_701961-221.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702944000&semt=ais")`}}>
-
+        <Navbar/>
+        {/* <div style={{backgroundImage:`url("https://img.freepik.com/premium-vector/delivery-agent-checking-delivery-illustration-concept-white-background_701961-221.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702944000&semt=ais")`, height: '100vh'}}> */}
         <section class="bg-gray-50 dark:bg-gray-900">
-        <div  style={{backgroundColor:"#cccbff",backgroundSize:"cover",overflow:"hidden"}} class="flex flex-col items-center justify-center px-10 py-10 md:h-screen lg:py-0">
+        <div  style={{backgroundSize:"cover",overflow:"hidden",height:'100vh'}} class="flex flex-col bg-teal-100 items-center justify-center px-10 py-10 md:h-screen lg:py-0">
+
+        <div class="p-6 bg-black mb-12" style={{border:"2px solid black",borderRadius:"20px"}}>
+            <h5
+            class="mb-2 text-xl font-medium leading-tight text-white dark:text-neutral-50" >
+            Already an Existing User!!!
+            </h5>
+            <p class="text-base text-white dark:text-neutral-50">
+            Welcome back, proceed with a signin, to view the new features and track your profile effectively.
+            </p>
+        </div>
 
         {/* <Marquee><p className='bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-2.5 py-2.5 shadow-md mt-0.5 mb-7'><h2>Note: Access to the Website is restricted to the Admins, contact Admin for further assistance. </h2></p></Marquee> */}
-        <img
-                src='https://img.freepik.com/free-vector/store-staff-check-number-products-that-must-be-delivered-customers-during-day_1150-51079.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703721600&semt=ais'
-                alt='remoteimage'
-                width={"250px"}
-                className='mb-10'
-            />
             <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -109,7 +114,7 @@ const SignIn = () => {
 
     </section>
     <Footer/>
-        </div>
+        {/* </div> */}
         </React.Fragment>
     )
 }

@@ -3,11 +3,14 @@ import React,{useState} from 'react';
 const Navbar = () => {
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
+
 
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  
   return (
     <header>
        <nav className="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800" style={{backgroundColor:"bg-black",backgroundSize:"cover",overflow:"hidden"}}>
@@ -36,27 +39,36 @@ const Navbar = () => {
         </div>
         {/* <h3 className='flex-left text-teal-300'> Your Bills with Essential Stats.</h3> */}
 
-        <div id="mobileMenu" className={`lg:flex flex-grow items-center lg:justify-end ${isMobileMenuOpen ? '' : 'hidden'}`}>
+        <div id="mobileMenu" className={`lg:flex flex-grow items-center justify-center lg:justify-end  ${isMobileMenuOpen ? '' : 'hidden'}`}>
           <ul className="lg:flex sm:w-full lg:w-1/2 mx-auto">
             <hr/>
             <li className='p-5'>
-              <a href='http://localhost:3000' className="text-teal-300" style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Home</a>
+              <a href='http://localhost:3000' className="text-teal-300 dark:text-white border-b border-white pb-1">Home</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/dashboard' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Dashboard</a>
+              <a href='http://localhost:3000/dashboard' className="text-teal-300 dark:text-white border-b border-white pb-1">Dashboard</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/services' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Services</a>
+              <a href='http://localhost:3000/services' className="text-teal-300 dark:text-white border-b border-white pb-1">Services</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/contact-us' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Contact</a>
+              <a href='http://localhost:3000/graphs' className="text-teal-300 dark:text-white border-b border-white pb-1">Chart Visualizations</a>
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/donate' className="text-teal-300"  style={{border:"2px solid white",padding:"5px",borderRadius:"12px"}}>Donate</a>
+              <a href='http://localhost:3000/contact-us' className="text-teal-300 dark:text-white border-b border-white pb-1">Contact</a>
+            </li>
+            <hr/>
+            <li className='p-5' >
+              <a href='http://localhost:3000/donate' className="text-teal-300 dark:text-white border-b border-white pb-1">Donate</a>
+            </li>
+            <hr/>
+
+            <li className='p-5' >
+              <a href='http://localhost:3000/signup' className="text-teal-300 dark:text-white border-b border-white pb-1">SignUp</a>
             </li>
             {/* <li className='p-1'>
             <a href='http://localhost:3000/donate' className='text-white' style={{ display: 'flex', alignItems: 'center',alignContent:"center" }}>
@@ -64,6 +76,7 @@ const Navbar = () => {
               height:"70px",marginLeft: '5px',border:"2px solid white",borderRadius:"25px" }} />
             </a>
            </li> */}
+         
           </ul>
         </div>
     </nav>
