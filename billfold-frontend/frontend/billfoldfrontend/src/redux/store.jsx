@@ -17,13 +17,14 @@ import financeReducer from './financeSlice';
 import {thunk} from 'redux-thunk';
 
 const reducers = combineReducers({
-    financeReducer          
+    finance: financeReducer          
 });
 
 const persistConfig = {
     key: 'root',
+    version: 1,
     storage,
-    whitelist:['finance']
+    // whitelist:['finance']
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

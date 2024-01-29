@@ -6,7 +6,7 @@ const TokenValidity = () => {
     const checkTokenExpiration = () => {
       if (!AuthService.isAuthenticated()) {
         // Redirect to the login page if the token is expired
-        window.location.href = 'http://localhost:3000/sigup';
+        window.location.href = 'http://localhost:3000/signup';
       }
     };
 

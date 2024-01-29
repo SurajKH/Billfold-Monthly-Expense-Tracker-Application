@@ -345,9 +345,10 @@ const Dashboard = () => {
             <p className="text-lg font-semibold">Current Month: {selectedMonth}</p>
           </div>
         </div>
-      ) && <SavingsChart data={monthlySavingsData}/>}
+      )}
     
        <ReduxContents/>
+       <SavingsChart/>
       <Footer />
     </>
   );
