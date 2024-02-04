@@ -3,6 +3,7 @@ import {  Line } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 import { LinearScale, CategoryScale, PointElement, LineElement, Title, Tooltip, Legend, Chart as ChartJS } from 'chart.js';
 import Navbar from './Navbar';
+import InvestmentForm from './InvestmentForm';
 // import { setAmount, setCurrentMonth, setSavings } from '../redux/financeSlice';
 ChartJS.register(
     LinearScale,
@@ -18,7 +19,11 @@ ChartJS.register(
         const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     
         const financeState = useSelector((state) => state.finance);
-        console.log(financeState.monthlyAmounts);
+        const investmentFormState = useSelector((state) => state.investment);
+        
+        // console.log(financeState.monthlyAmounts);
+        // console.log('Redux State: ',investmentFormState);
+        console.log(investmentFormState?.investedAmount);
         const data = {
         labels,
         datasets: [
@@ -47,6 +52,7 @@ ChartJS.register(
         <Navbar/>
             <div className='mx-auto w-1/2'>
             <Line options={options} data={data} />
+            <InvestmentForm/>
             </div>
         </React.Fragment>
         );
