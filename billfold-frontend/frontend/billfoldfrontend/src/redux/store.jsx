@@ -25,7 +25,6 @@ const persistConfig = {
     key: 'root',
     version: 1,
     storage,
-    // whitelist:['finance']
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
@@ -33,7 +32,11 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 const store = configureStore({
     reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware()
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: {
+          ignoredActions: ['persist/PERSIST'], // Ignore serializability check for this action
+        },
+      })
 });
 
 export default store;

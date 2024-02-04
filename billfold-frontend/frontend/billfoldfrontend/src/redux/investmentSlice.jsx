@@ -1,27 +1,29 @@
-// financeSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const investmentSlice = createSlice({
   name: 'investment',
   initialState: {
-    monthlyAmounts: Array(12).fill(0),
+    investedAmount: Array(12).fill(0),
     currentMonth: 'January',
-    savings: 0,
+    years: 0,
   },
   reducers: {
-    setAmount: (state, action) => {
+    setInvestedAmount: (state, action) => {
       const { month, amount } = action.payload;
-      state.monthlyAmounts[month] = amount;
+      console.log('Month: ' , month, 'Amount: ', amount);
+      state.investedAmount[month] = amount;
     },
     setCurrentMonth: (state, action) => {
       state.currentMonth = action.payload;
     },
-    setSavings: (state, action) => {
-      state.savings = action.payload;
+    setYears: (state, action) => {
+      state.years = action.payload;
     },
   },
 });
 
-export const { setAmount, setCurrentMonth, setSavings } = investmentSlice.actions;
+export const { setInvestedAmount, setCurrentMonth, setYears } = investmentSlice.actions;
 
 export default investmentSlice.reducer;
+
+
