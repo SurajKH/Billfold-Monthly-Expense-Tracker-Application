@@ -16,22 +16,24 @@ Key Features:
 4. Integration of ChatBot to tackle all the User queries in a much efficient manner.
 5. CI/CD Pipeline Setup of Github Actions and containerization of different microservices using Docker.
 
-1. Home Page:
 
+Home Page:
+
+Integration of ChatBot: 
+
+Pdf Generation for tracking Monthly Saving Report:
   
+SignUp Page:
 
-3. SignUp Page:
+SignIn Page:
 
-4. SignIn Page:
+Services Page:
 
-3. Services Page:
+Dashboard Page:
 
-4. Dashboard Page:
+Chart Visualization Page:
 
-5. Chart Visualization Page:
 
-6. Integration of ChatBot:   
-
-7. Contact Us Page:
+Contact Us Page:
 
  
