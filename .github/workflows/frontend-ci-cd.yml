@@ -1,4 +1,4 @@
-name: React CI Setup.
+name: React CI-CD Setup.
 
 on:
   push:
@@ -23,9 +23,11 @@ jobs:
         node-version: '14'
 
     - name: Install Dependencies
+      working-directory: ./billfold-frontend/frontend/billfoldfrontend  # Specify the path to the package.json file
       run: npm install
 
     - name: Build
+      working-directory: ./billfold-frontend/frontend/billfoldfrontend  # Specify the path to the package.json file
       run: npm run build
   build_and_push:
   
