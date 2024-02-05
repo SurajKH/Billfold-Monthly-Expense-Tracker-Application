@@ -15,7 +15,7 @@ Key Features:
 3. State Management for all the Users, to track their respective data in an efficient manner to provide an insightful visualizations.
 4. Integration of ChatBot to tackle all the User queries in a much efficient manner.
 5. CI/CD Pipeline Setup of Github Actions and containerization of different microservices using Docker.
-
+6. Responsive Website and compactible for Laptop,Tablet and Mobile Screens.
 
 Home Page:
 
@@ -30,15 +30,29 @@ Pdf Generation for tracking Monthly Saving Report:
   
 SignUp Page:
 
+<img width="1019" alt="signup-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/465cb35a-4eda-44b2-b2d8-fbbeb7409175">
+
+
 SignIn Page:
 
+<img width="1036" alt="signin" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/2374fa30-aaae-4dd7-808d-2f5b2212ccb3">
+
 Services Page:
+
+<img width="762" alt="services-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/ea421450-8cd1-48d2-a2d8-86053237af7c">
+
 
 Dashboard Page:
 
 Chart Visualization Page:
 
 
+<img width="824" alt="chart-ui" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/03f1fdc2-52b8-4e65-8791-115361adf772">
+
+
+
 Contact Us Page:
+
+<img width="800" alt="contact-us" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/8ae49546-d6d9-404f-a0a2-2f18df321520">
 
  
