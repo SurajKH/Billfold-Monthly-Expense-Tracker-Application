@@ -26,6 +26,8 @@ Integration of ChatBot: ChatBot assistance for Enhancing User Interactions in th
 <img width="1314" alt="chat-bot" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/ad52202f-2034-4cd1-95af-b4f18c220c4c">
 
 Pdf Generation for tracking Monthly Saving Report: https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/blob/main/monthly-savings-report.pdf
+
+<img width="1212" alt="generated-pdf" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/a8b1bbf7-6a8d-428e-a5e7-4757ff4ab3b2">
   
 SignUp Page: SignUp UI for the New Users, and an option for Navigating to Sign In Page as well.
 
