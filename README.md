@@ -12,7 +12,7 @@ Key Features:
 
 1. Token Expiry Implemented using Jwt Token, for making sure that the application's security is considered as the top priority.
 2. Integration of Interactive Charts for enhancing the user performance.
-3. State Management for all the Users, to track their respective data in an efficient manner to provide an insightful visualizations.
+3. State Management for all the Users using Redux Toolkit, to track their respective data in an efficient manner to provide an insightful visualizations.
 4. Integration of ChatBot to tackle all the User queries in a much efficient manner.
 5. CI/CD Pipeline Setup of Github Actions and containerization of different microservices using Docker.
 6. Responsive Website and compactible for Laptop,Tablet and Mobile Screens.
