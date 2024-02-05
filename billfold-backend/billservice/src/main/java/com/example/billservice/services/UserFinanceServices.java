@@ -29,7 +29,7 @@ public class UserFinanceServices {
         Double midCapAmount=Double.parseDouble(investmentAmount)*midCap;
         Double maxCapAmount=Double.parseDouble(investmentAmount)*maxCap;
 
-        return  new ArrayList<Double>(Arrays.asList(minCapAmount, maxCapAmount,midCapAmount,minCap,midCap,maxCap));
+        return  new ArrayList<Double>(Arrays.asList(minCapAmount,midCapAmount,maxCapAmount,minCap,midCap,maxCap));
     }
 
     public List<Double> midPlanInvestments(Double minCap, Double midCap,Double maxCap,
@@ -43,21 +43,21 @@ public class UserFinanceServices {
         Double midCapAmount=Double.parseDouble(investmentAmount)*midCap;
         Double maxCapAmount=Double.parseDouble(investmentAmount)*maxCap;
 
-        return  new ArrayList<Double>(Arrays.asList(minCapAmount, maxCapAmount,midCapAmount,minCap,midCap,maxCap));
+        return  new ArrayList<Double>(Arrays.asList(minCapAmount,midCapAmount,maxCapAmount,minCap,midCap,maxCap));
     }
 
     public List<Double> smallPlanInvestments(Double minCap, Double midCap,Double maxCap,
     String investmentAmount)
     {
         minCap=(double) (Constants.TWO_TO_FIVE_YEARS_AMOUNT/2);
-        midCap=(double) ((Constants.TWO_TO_FIVE_YEARS_AMOUNT*2)/3);
-        maxCap=(double) ((Constants.TWO_TO_FIVE_YEARS_AMOUNT*3)/4);
+        midCap=(double) ((Constants.TWO_TO_FIVE_YEARS_AMOUNT*3)/4);
+        maxCap=(double) ((Constants.TWO_TO_FIVE_YEARS_AMOUNT));
 
         Double minCapAmount=Double.parseDouble(investmentAmount)*minCap;
         Double midCapAmount=Double.parseDouble(investmentAmount)*midCap;
         Double maxCapAmount=Double.parseDouble(investmentAmount)*maxCap;
 
-        return  new ArrayList<Double>(Arrays.asList(minCapAmount, maxCapAmount,midCapAmount,minCap,midCap,maxCap));
+        return  new ArrayList<Double>(Arrays.asList(minCapAmount,midCapAmount,maxCapAmount,minCap,midCap,maxCap));
     }
 
     public UserFinanceResponseDTO userFinanceCalculation(UserFinance userFinance)
@@ -79,7 +79,7 @@ public class UserFinanceServices {
             maxCapAmount=largeInvestmentPlanAmount.get(2);
             minCap=largeInvestmentPlanAmount.get(3);
             midCap=largeInvestmentPlanAmount.get(4);
-            maxCapAmount=largeInvestmentPlanAmount.get(5);
+            maxCap=largeInvestmentPlanAmount.get(5);
         }
         else if(Integer.parseInt(years)>=5 && Integer.parseInt(years)<10)
         {
@@ -90,7 +90,7 @@ public class UserFinanceServices {
             maxCapAmount=midInvestmentPlanAmount.get(2);
             minCap=midInvestmentPlanAmount.get(3);
             midCap=midInvestmentPlanAmount.get(4);
-            maxCapAmount=midInvestmentPlanAmount.get(5);
+            maxCap=midInvestmentPlanAmount.get(5);
         }
         else if(Integer.parseInt(years)>=2 && Integer.parseInt(years)<5)
         {
@@ -100,7 +100,7 @@ public class UserFinanceServices {
             maxCapAmount=smallInvestmentPlanAmount.get(2);
             minCap=smallInvestmentPlanAmount.get(3);
             midCap=smallInvestmentPlanAmount.get(4);
-            maxCapAmount=smallInvestmentPlanAmount.get(5);
+            maxCap=smallInvestmentPlanAmount.get(5);
            
         }
         else 
@@ -109,16 +109,19 @@ public class UserFinanceServices {
         }
 
         UserFinanceResponseDTO user=new UserFinanceResponseDTO();
-
-        user.setDate(userFinance.getDate());
+        
+        user.setMonth(userFinance.getMonth());
         user.setInvestmentAmount(userFinance.getInvestmentAmount());
         user.setMinCap(minCap);
         user.setMidCap(midCap);
         user.setMaxCap(maxCap);
         user.setYears(years);
-        user.setMaxCapAmount(maxCapAmount);
-        user.setMidCapAmount(midCapAmount);
         user.setMinCapAmount(minCapAmount);
+        user.setMidCapAmount(midCapAmount);
+        user.setMaxCapAmount(maxCapAmount);
+        user.setMinCapProfit(minCapAmount-Double.parseDouble(investmentAmount));
+        user.setMidCapProfit(midCapAmount-Double.parseDouble(investmentAmount));
+        user.setMaxCapProfit(maxCapAmount-Double.parseDouble(investmentAmount));
         userFinanceRepository.save(userFinance);
         return user;
     }

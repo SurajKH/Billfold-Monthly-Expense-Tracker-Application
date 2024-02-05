@@ -16,7 +16,7 @@ import lombok.Setter;
 public class UserFinanceResponseDTO {
     
     private String investmentAmount;
-    private String date;
+    private String month;
     private String years;
     private Double minCap;
     private Double maxCap;
@@ -24,4 +24,7 @@ public class UserFinanceResponseDTO {
     private Double minCapAmount;
     private Double maxCapAmount;
     private Double midCapAmount;
+    private Double minCapProfit;
+    private Double midCapProfit;
+    private Double maxCapProfit;
 }

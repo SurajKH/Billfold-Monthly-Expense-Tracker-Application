@@ -10,5 +10,5 @@ spring:
     password: root#123
     driver-class-name: com.mysql.cj.jdbc.Driver
   config:
-    import: configserver:http://localhost:9296
+    import: optional:configserver:http://localhost:9296
 

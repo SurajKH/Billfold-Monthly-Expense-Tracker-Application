@@ -11,11 +11,13 @@ import com.example.billservice.dto.UserFinanceResponseDTO;
 import com.example.billservice.entity.UserFinance;
 import com.example.billservice.services.UserFinanceServices;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/v1/finance")
 public class UserFinanceController {
 
