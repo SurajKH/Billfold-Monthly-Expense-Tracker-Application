@@ -42,8 +42,6 @@ Services Page:
 <img width="762" alt="services-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/ea421450-8cd1-48d2-a2d8-86053237af7c">
 
 
-Dashboard Page:
-
 Chart Visualization Page:
 
 
@@ -51,7 +49,7 @@ Chart Visualization Page:
 
 
 
-Contact Us Page:
+Contact Us Page: Inorder to store the user data, making use of firebase[Cloud Firestore] 
 
 <img width="800" alt="contact-us" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/8ae49546-d6d9-404f-a0a2-2f18df321520">
 
