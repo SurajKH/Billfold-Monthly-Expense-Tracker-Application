@@ -28,7 +28,7 @@ jobs:
 
     - name: Build
       working-directory: ./billfold-frontend/frontend/billfoldfrontend  # Specify the path to the package.json file
-      run: npm run build > npm-build.log 2>&1  # Redirect npm run build output to a log file
+      run: npm run build > log_file.log 2>&1  # Redirect npm run build output to a log file
 
   build_and_push:
   
