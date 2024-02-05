@@ -22,4 +22,4 @@ jobs:
         with:
           context: ./billfold-backend/serviceregistry
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:service-discovery-latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:service-registry-latest
