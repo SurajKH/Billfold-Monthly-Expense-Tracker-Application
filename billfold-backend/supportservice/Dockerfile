@@ -20,9 +20,9 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=builder /app/target/ConfigServer-0.0.1-SNAPSHOT.jar configserver-service-docker.jar
+COPY --from=builder /app/target/supportservice-0.0.1-SNAPSHOT.jar supportservice-service-docker.jar
 
 EXPOSE 8080
 
 # Specify the default command to run on container startup
-CMD ["java", "-jar", "configserver-service-docker.jar"]
+CMD ["java", "-jar", "supportservice-service-docker.jar"]
