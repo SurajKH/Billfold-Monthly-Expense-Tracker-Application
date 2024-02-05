@@ -49,16 +49,4 @@ jobs:
         with:
           context: ./billfold-frontend/frontend/billfoldfrontend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:reactjs-app-latest
-    
-  store_logs:
-     needs: [build, build_and_push]
-     runs-on: ubuntu-latest
-     steps:
-      - name: Archive logs
-        uses: actions/upload-artifact@v2
-        with:
-          name: logs
-          path: |
-            npm-install.log
-            npm-build.log    
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:reactjs-app-latest    
