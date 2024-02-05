@@ -20,6 +20,6 @@ jobs:
       - name: Docker Build and Push to DockerHub
         uses: docker/build-push-action@v3
         with:
-          context: ./billfold-backend/serviceregistry/Dockerfile
+          context: ./billfold-backend/serviceregistry
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:latest
