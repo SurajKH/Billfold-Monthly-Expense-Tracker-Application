@@ -23,4 +23,4 @@ jobs:
         with:
           context: ./billfold-backend/ConfigServer
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:support-service-latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:configserver-service-latest
