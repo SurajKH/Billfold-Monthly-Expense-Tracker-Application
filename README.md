@@ -34,6 +34,4 @@ Key Features:
 
 7. Contact Us Page:
 
-8. FAQ Page:
-
  
