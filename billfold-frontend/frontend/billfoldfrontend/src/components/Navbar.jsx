@@ -55,17 +55,17 @@ const Navbar = () => {
             </li>
             <hr/>
             <li className='p-5' >
-              <a href='http://localhost:3000/graphs' className="text-teal-300 dark:text-white border-b border-white pb-1">Chart Visualizations</a>
+              <a href='http://localhost:3000/graphs' className="text-teal-300 dark:text-white border-b border-white pb-1">Charts</a>
             </li>
             <hr/>
             <li className='p-5' >
               <a href='http://localhost:3000/contact-us' className="text-teal-300 dark:text-white border-b border-white pb-1">Contact</a>
             </li>
             <hr/>
-            <li className='p-5' >
+            {/* <li className='p-5' >
               <a href='http://localhost:3000/donate' className="text-teal-300 dark:text-white border-b border-white pb-1">Donate</a>
             </li>
-            <hr/>
+            <hr/> */}
 
             <li className='p-5' >
               <a href='http://localhost:3000/signup' className="text-teal-300 dark:text-white border-b border-white pb-1">SignUp</a>
