@@ -17,27 +17,26 @@ Key Features:
 5. CI/CD Pipeline Setup of Github Actions and containerization of different microservices using Docker.
 6. Responsive Website and compactible for Laptop,Tablet and Mobile Screens.
 
-Home Page:
+Home Page: Home Page for the Application.
 
 <img width="1439" alt="home-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/b0a26ab0-060d-4699-85ff-e9fd2e74ebd5">
 
-Integration of ChatBot: 
-
+Integration of ChatBot: ChatBot assistance for Enhancing User Interactions in the application.
 
 <img width="1314" alt="chat-bot" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/ad52202f-2034-4cd1-95af-b4f18c220c4c">
 
 Pdf Generation for tracking Monthly Saving Report: https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/blob/main/monthly-savings-report.pdf
   
-SignUp Page:
+SignUp Page: SignUp UI for the New Users, and an option for Navigating to Sign In Page as well.
 
 <img width="1019" alt="signup-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/465cb35a-4eda-44b2-b2d8-fbbeb7409175">
 
 
-SignIn Page:
+SignIn Page: SignIn UI for the already existing users. 
 
 <img width="1036" alt="signin" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/2374fa30-aaae-4dd7-808d-2f5b2212ccb3">
 
-Services Page: 
+Services Page: Depicting different services being offered by the application.
 
 <img width="762" alt="services-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/ea421450-8cd1-48d2-a2d8-86053237af7c">
 
