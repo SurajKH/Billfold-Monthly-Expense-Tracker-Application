@@ -28,7 +28,8 @@ jobs:
 
     - name: Build
       working-directory: ./billfold-frontend/frontend/billfoldfrontend  # Specify the path to the package.json file
-      run: npm run build
+      run: npm run build > npm-build.log 2>&1  # Redirect npm run build output to a log file
+
   build_and_push:
   
     name: Build & Push to DockerHub
@@ -48,4 +49,16 @@ jobs:
         with:
           context: ./billfold-frontend/frontend/billfoldfrontend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:reactjs-app-latest 
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:reactjs-app-latest
+    
+  store_logs:
+     needs: [build, build_and_push]
+     runs-on: ubuntu-latest
+     steps:
+      - name: Archive logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: logs
+          path: |
+            npm-install.log
+            npm-build.log    
