@@ -56,9 +56,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST,"/api/v1/signup/phone").permitAll()
                         .requestMatchers(HttpMethod.POST,"/api/v1/refresh")
                         .permitAll()
-                        .requestMatchers(HttpMethod.POST,"http://localhost:8081/api/v1/support/**")
+                        .requestMatchers(HttpMethod.POST,"http://localhost:8081/api/v1/finance/fixed-deposits")
                         .permitAll()
-                        .requestMatchers(HttpMethod.GET,"/user").authenticated() 
                         .requestMatchers(HttpMethod.GET,"/dashboard").authenticated()
                         .anyRequest().authenticated();
 

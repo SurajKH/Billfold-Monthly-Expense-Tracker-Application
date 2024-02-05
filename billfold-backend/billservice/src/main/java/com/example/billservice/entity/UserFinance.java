@@ -27,7 +27,7 @@ public class UserFinance {
     private UUID id;
 
     private String investmentAmount;
-    private String date;
+    private String month;
     private String years;
 
 }
