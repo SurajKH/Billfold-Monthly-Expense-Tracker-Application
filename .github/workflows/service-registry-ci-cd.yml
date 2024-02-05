@@ -1,4 +1,4 @@
-name: CI/CD Setup for Bill Service
+name: CI/CD Setup for Service Registry Service
 
 on:
   push:
