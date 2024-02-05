@@ -37,12 +37,12 @@ SignIn Page:
 
 <img width="1036" alt="signin" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/2374fa30-aaae-4dd7-808d-2f5b2212ccb3">
 
-Services Page:
+Services Page: 
 
 <img width="762" alt="services-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/ea421450-8cd1-48d2-a2d8-86053237af7c">
 
 
-Chart Visualization Page:
+Chart Visualization Page: Chart Visualization for the User, to depict the savings amount for the particular user through out the year.
 
 
 <img width="824" alt="chart-ui" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/03f1fdc2-52b8-4e65-8791-115361adf772">
