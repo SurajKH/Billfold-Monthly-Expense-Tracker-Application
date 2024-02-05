@@ -19,6 +19,8 @@ Key Features:
 
 Home Page:
 
+<img width="1439" alt="home-page" src="https://github.com/SurajKH/Billfold-Monthly-Expense-Tracker-Application/assets/90398336/b0a26ab0-060d-4699-85ff-e9fd2e74ebd5">
+
 Integration of ChatBot: 
 
 Pdf Generation for tracking Monthly Saving Report:
