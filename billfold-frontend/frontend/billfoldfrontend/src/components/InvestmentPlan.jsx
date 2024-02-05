@@ -19,19 +19,12 @@ const InvestmentPlan = () => {
         const investedAmount = parseFloat(e.target.investmentAmount.value) || 0;
         const month= parseFloat(e.target.selectedMonth.value) || 0;
         const years= parseFloat(e.target.years.value) || 0;
-        //need to consider a post to the endpoints.
-        // const formData={
-        //   'investedAmount':investedAmount,'month':month,'years':years
-        // }
-        console.log(investedAmount, ' ', month, ' ',years);
-        console.log(typeof(investedAmount.toString()), ' ', typeof(month), ' ',typeof(years));
         
         const formData={
           "investmentAmount":investedAmount.toString(),
           "month":month.toString(),
           "years":years.toString()
       }
-      //  const response=await axios.post("/bill-service/api/v1/finance/fixed-deposits", formData);
 
       const response=await axios.post("http://localhost:8081/api/v1/finance/fixed-deposits",formData);
         console.log(response.data);
@@ -41,7 +34,6 @@ const InvestmentPlan = () => {
     <Navbar/>
     <div className="max-w-md mx-auto p-6 border border-gray-500 shadow-md rounded-md m-12">
        <form onSubmit={handleFormSubmit}>
-          {/* Wallet Amount Field */}
           <div className="mb-4">
             <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-600">
              Investing Amount: 

@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import FAQ from './FAQ';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -125,6 +126,7 @@ const Contact = () => {
           draggable
         />
       </div>
+      <FAQ/>
       <Footer />
     </div>
   );
